@@ -16,7 +16,9 @@ describe("My  Second Test Suite", function (){
 					cy.wrap($el).find('button').click()
 				}
 		});
-		
+		cy.get('.cart-icon > img').click()
+		cy.contains('PROCEED TO CHECKOUT').click()
+		cy.contains('Place Order').click()
 	});
 });
 console.log('This will be printed in the web browser console');
