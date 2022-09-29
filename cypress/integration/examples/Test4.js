@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+const { invoke } = require("cypress/types/lodash");
+
 describe("My  Fourth Test Suite", function (){
 	it("My FourthTest case", function () {
 		cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
@@ -17,6 +19,10 @@ describe("My  Fourth Test Suite", function (){
 			//Mocha
 			expect(str).to.equal('Hello , Are you sure you want to confirm?')
 		})
+		// invoke method call a function and in jQuery removeattr function will remove the attribute of an element
+		// cypress supports all jquery objects and functions
+		cy.get('#opentab').invoke('removeAttr', 'target').click()
+
 	});
 });
 console.log('This will be printed in the web browser console');
