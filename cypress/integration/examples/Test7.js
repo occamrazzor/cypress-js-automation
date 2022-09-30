@@ -1,3 +1,7 @@
+/// <reference types='cypress'/>
+
+
+
 
 describe("My  Seventh Test Suite", function () {
     
