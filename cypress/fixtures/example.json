@@ -1,6 +1,7 @@
 {
   "name": "Occam",
   "gender": "Female",
-  "productName": ["Blackberry", "Nokia Edge"]
+  "productName": ["Blackberry", "Nokia Edge"],
+  "country": "India"
   
 }

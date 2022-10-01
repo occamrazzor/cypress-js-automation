@@ -1,4 +1,4 @@
-export class HomePage{
+class HomePage{
  
     getEditBox() {
         return cy.get('input[name="name"]:nth-child(2)') 
@@ -14,7 +14,7 @@ export class HomePage{
     }
 
     getEntrepreneaur() {
-        cy.get('#inlineRadio3')
+        return cy.get('#inlineRadio3')
     }
 
     getShopTab() {
@@ -26,5 +26,5 @@ export class HomePage{
 // In the it{block create an object of the HomePage class to access the functions}
     // ---> const homePage = new HomePage()
 
-
 }
+export default HomePage;
