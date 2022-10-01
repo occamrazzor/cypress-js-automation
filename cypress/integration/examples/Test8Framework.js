@@ -1,4 +1,5 @@
 /// <reference types='cypress'/>
+import HomePage from '../pageObjects/HomePage'
 
 
 describe("Framework Test Suite with Json data file in fixtures folder", function () {
@@ -13,7 +14,9 @@ describe("Framework Test Suite with Json data file in fixtures folder", function
         })
     })
     
-	it('framework test', function () {
+    it('framework test', function () {
+        // create a new object from the homePage class
+       const homePage=new HomePage()
        // 3 validation below
         cy.visit('https://rahulshettyacademy.com/angularpractice/')
         // CSS Select using Parent child cascade form->input->class form-control: nth-child(1) out of 10
