@@ -76,9 +76,22 @@ describe("Framework Test Suite with Json data file in fixtures folder", function
         productPage.prodCheckOut().click()
 
         productPage.prodEnterCountry().type(this.data.country)
-        
-               
+                       
         productPage.prodSelectCountry().click()
+
+        //Note this object is hidden at runtime as such the test will fail so add {force: true}
+        productPage.prodCheckBox2().click({force: true})
+
+        productPage.prodPurchaseBtn().click()
+
+        //cy.get('.alert').should('have.text', 'Success! Thank you! Your order will be delivered in next few weeks :-).') This assert will fail because there are non printing spaces in the text so use includes
+
+        cy.get('.alert').then(function (element) {
+            const actualText = element.text()
+            expect(actualText.includes('Success')).to.be.true
+            
+               
+        })
 
 
     });
